@@ -1,10 +1,7 @@
 import { BorderBeam } from "@/components/ui/border-beam"
-// import ShineBorder from "@/components/ui/shine-border"
-// import { useTheme  } from "next-themes";
-
 
 const ProfileCard = () => {
-    // const theme = useTheme();
+
     return (
         <div className="w-full h-28 text-white bg-slate-400 relative flex justify-start px-3 items-center gap-2">
             <BorderBeam duration={10} borderWidth={2.5}/>

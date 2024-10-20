@@ -1,4 +1,4 @@
-import LandPage from "@/app/components/LandPage";
+import LandPage from "@/utils/LandPage";
 import bg from "@/app/assets/bg.svg";
 
 export default function Home() {
