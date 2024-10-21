@@ -9,10 +9,10 @@ import { SiGmail } from "react-icons/si";
 const ProfileCard = () => {
 
     return (
-        <div className="w-full h-max text-white relative flex justify-start items-center">
-            <div className="flex gap-4 h-full w-full p-2 items-center rounded-lg">
+        <div className="w-full h-max text-white relative flex  items-center">
+            <div className="flex gap-4 h-full w-full p-2 items-center rounded-lg justify-center">
                 <BorderBeam duration={12} borderWidth={3} />
-                <div className="flex gap-4 items-center border-2 border-white px-3 py-2 rounded-lg">
+                <div className="flex gap-4 w-full items-center border-2 border-white px-3 py-2 rounded-lg">
                     <Image src={img} alt="profile-pic" width={100} height={100} className="rounded-md" />
                     <div className="text-left">
                         <h6 className="text-lg font-bold">Kironmay Mishra</h6>
