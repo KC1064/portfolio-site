@@ -1,3 +1,4 @@
+// "use client"
 import Navbar from "./utils/Navbar";
 import ProfileCard from "./utils/ProfileCard";
 import Projects from "./utils/Projects";
