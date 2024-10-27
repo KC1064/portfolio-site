@@ -13,6 +13,12 @@ import digi from "@/app/assets/digicipher.png";
 import hang from "@/app/assets/hangman.png";
 import clang from "@/app/assets/custom-lang.png";
 import { FaGithub } from "react-icons/fa";
+import {
+    HoverCard,
+    HoverCardContent,
+    HoverCardTrigger,
+} from "@/components/ui/hover-card"
+
 
 type Tech = {
     [key: number]: string; // Allow numeric keys
@@ -76,48 +82,48 @@ export default function Projects() {
                 {
                     projects.map((item, index) => {
                         return (
-                            <Card key={index} className="bg-transparent text-white relative group">
-                                <CardHeader>
-                                    <CardTitle className="text-2xl">{item.title}</CardTitle>
-                                    <CardDescription>{item.description}</CardDescription>
-                                </CardHeader>
-                                <CardContent className="flex gap-1">
-                                    {
-                                        Object.keys(item.tech).map((key) => {
-                                            const techKey = Number(key); // Convert string key to number
-                                            return (
-                                                <span key={techKey} className="h-max w-max px-2 bg-gray-500 text-black rounded-md italic ">
-                                                    {item.tech[techKey]}
-                                                </span>
-                                            );
-                                        })
-                                    }
-                                </CardContent>
-                                <CardFooter className="flex gap-2">
-                                    <p className="h-max w-max px-2 bg-slate-400 rounded-md text-black flex gap-1 items-center py-1 font-bold hover:bg-white transition-all duration-500">
-                                        <a href={item.link} target="_blank" rel="noopener noreferrer">GitHub</a>
-                                        <FaGithub size={"20px"} />
-                                    </p>
-                                    {item.live && (
-                                        <p className="flex h-max w-max px-2 py-1 gap-1 items-center text-black bg-slate-400 rounded-md font-bold hover:bg-white transition-all duration-500">
-                                            <a href={item.live} target="_blank" rel="noopener noreferrer">Live Demo</a>
-                                            <ArrowUpRight size={"18px"} />
-                                        </p>
-                                    )}
-                                </CardFooter>
-                                {/* Image to show on hover */}
-                                <Image
-                                    src={item.image}
-                                    alt="Project Preview"
-                                    className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                                    width={200}
-                                    height={200}
-                                    priority
-                                />
-                            </Card>
+                            <HoverCard>
+                                <HoverCardTrigger>
+                                    <Card key={index} className="bg-transparent text-white relative group">
+                                        <CardHeader>
+                                            <CardTitle className="text-2xl">{item.title}</CardTitle>
+                                            <CardDescription>{item.description}</CardDescription>
+                                        </CardHeader>
+                                        <CardContent className="flex gap-1">
+                                            {
+                                                Object.keys(item.tech).map((key) => {
+                                                    const techKey = Number(key); // Convert string key to number
+                                                    return (
+                                                        <span key={techKey} className="h-max w-max px-2 bg-gray-500 text-black rounded-md italic ">
+                                                            {item.tech[techKey]}
+                                                        </span>
+                                                    );
+                                                })
+                                            }
+                                        </CardContent>
+                                        <CardFooter className="flex gap-2">
+                                            <p className="h-max w-max px-2 bg-slate-400 rounded-md text-black flex gap-1 items-center py-1 font-bold hover:bg-white transition-all duration-500">
+                                                <a href={item.link} target="_blank" rel="noopener noreferrer">GitHub</a>
+                                                <FaGithub size={"20px"} />
+                                            </p>
+                                            {item.live && (
+                                                <p className="flex h-max w-max px-2 py-1 gap-1 items-center text-black bg-slate-400 rounded-md font-bold hover:bg-white transition-all duration-500">
+                                                    <a href={item.live} target="_blank" rel="noopener noreferrer">Live Demo</a>
+                                                    <ArrowUpRight size={"18px"} />
+                                                </p>
+                                            )}
+                                        </CardFooter>
+                                    </Card>
+                                </HoverCardTrigger>
+                                <HoverCardContent>
+                                    <Image src={item.image} alt={item.title} layout="responsive" />
+                                </HoverCardContent>
+                            </HoverCard>
                         );
                     })
                 }
+
+
             </div>
         </div>
     );

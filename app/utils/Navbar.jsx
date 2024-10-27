@@ -1,14 +1,18 @@
 import Link from "next/link";
-import Image from "next/image"
+import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import { CheckIcon } from "lucide-react";
 import { AnimatedSubscribeButton } from "@/components/ui/animated-subscribe-button";
-import logo from "@/app/assets/logo.png"
+import logo from "@/app/assets/logo.png";
 
 const Navbar = () => {
   return (
-    <div className="w-full flex items-center justify-between">
-      <h1 className="text-white font-bold h-16 w-16"><Image src={logo} className="h-amx w-max"></Image></h1>
+    <div className="w-[70%] flex items-center justify-between bg-white backdrop-blur-md bg-opacity-5">
+      <Image
+        src={logo}
+        width={"60"}
+        className="md:h-16 md:w-16 lg:h-18 lg:w-18 sm:w-14 sm:h-14 xs:h-10 xs:w-10"
+      ></Image>
       <div className="flex gap-6 items-center">
         <Link
           href={"/"}
