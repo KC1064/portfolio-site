@@ -1,56 +1,52 @@
-import Link from "next/link";
-import Image from "next/image";
-import { ExternalLink } from "lucide-react";
-import { CheckIcon } from "lucide-react";
-import { AnimatedSubscribeButton } from "@/components/ui/animated-subscribe-button";
-import logo from "@/app/assets/logo.png";
+"use client";
 
-const Navbar = () => {
+import Link from "next/link";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
+
+export default function Navbar() {
+  const navlinks = [
+    { name: "home", link: "/" },
+    { name: "about", link: "/about" },
+    { name: "projects", link: "/projects" },
+    { name: "blogs", link: "/blogs" },
+  ];
+
   return (
-    <div className="w-[70%] flex items-center justify-between bg-white backdrop-blur-md bg-opacity-5">
-      <Image
-        src={logo}
-        width={"60"}
-        className="md:h-16 md:w-16 lg:h-18 lg:w-18 sm:w-14 sm:h-14 xs:h-10 xs:w-10"
-      ></Image>
-      <div className="flex gap-6 items-center">
-        <Link
-          href={"/"}
-          className="text-slate-400 hover:text-white hover:font-semibold duration-300 transition-all"
-        >
-          Home
-        </Link>
-        <Link
-          href={"about"}
-          className="text-slate-400 hover:text-white hover:font-semibold duration-300 transition-all"
-        >
-          About
-        </Link>
-        <a
-          href="https://drive.google.com/file/d/1xDctoGXSREiu75YzgpwEY51QFA0uQlg7/view?usp=sharing"
-          download={"true"}
-        >
-          <AnimatedSubscribeButton
-            buttonColor="#000000"
-            buttonTextColor="#ffffff"
-            subscribeStatus={false} // Make sure this is handled in the component
-            initialText={
-              <span className="group inline-flex items-center">
-                Resume{" "}
-                <ExternalLink className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </span>
-            }
-            changeText={
-              <span className="group inline-flex items-center">
-                <CheckIcon className="mr-2 size-4" />
-                Downloaded{" "}
-              </span>
-            }
-          />
-        </a>
+    <div className="w-full h-max flex justify-between items-center p-4">
+      <div className="flex gap-4">
+        {navlinks.map((item, index) => (
+          <Link
+            style={{ fontFamily: "gilroy" }}
+            key={index}
+            href={item.link}
+            className="text-md font-extrabold text-slate-400 dark:text-gray-400 hover:text-black hover:dark:text-gray-100 transition"
+          >
+            {item.name}
+          </Link>
+        ))}
+      </div>
+      <div className="relative flex items-center">
+        <ModeToggle />
       </div>
     </div>
   );
-};
+}
 
-export default Navbar;
+export function ModeToggle() {
+  const { setTheme } = useTheme();
+
+  return (
+    <>
+      <Sun
+        className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+        onClick={() => setTheme("dark")}
+      />
+      <Moon
+        className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+        onClick={() => setTheme("light")}
+      />
+      <span className="sr-only">Toggle theme</span>
+    </>
+  );
+}
