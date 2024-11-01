@@ -6,9 +6,6 @@ import { FiGithub } from "react-icons/fi";
 import { FiMail } from "react-icons/fi";
 import Link from "next/link";
 
-
-
-
 const ProfileCard = () => {
     const socials = [
         {
@@ -31,7 +28,7 @@ const ProfileCard = () => {
                     style={{ fontFamily: "teodor" }}
                     className="text-6xl  text-black dark:text-white">hi kiron here!<span className="text-6xl">👋</span></h1>
                 <p style={{ fontFamily: "gilroy" }} className="text-sm">21-year-old <span className="font-bold">Fullstack Developer</span> from <span className="font-bold">Odisha,India</span></p>
-                <p style={{ fontFamily: "gilroy" }} className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, nostrum.</p>
+                <p style={{ fontFamily: "gilroy" }} className="text-sm">Loves to bring ideas into life with coding and a cup of coffee.</p>
                 <div className="mt-6 flex gap-6 items-center">
                     <button
                         style={{ fontFamily: "gilroy" }}

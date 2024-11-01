@@ -1,6 +1,7 @@
 import Navbar from "./utils/Navbar";
 import ProfileCard from "./utils/ProfileCard";
 import Projects from "./utils/Projects";
+import TechStack from "./utils/TechStack";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Navbar />
       <ProfileCard />
       <Projects />
+      <TechStack/>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import { StaticImageData } from "next/image";
 import clang from "@/app/assets/interpreter.jpeg";
 import dc1 from "@/app/assets/dc-1.jpeg";
-import dc2 from "@/app/assets/dc-2.jpeg";
 import hang from "@/app/assets/hangman.jpeg";
 import keys from "@/app/assets/keysprint.jpeg";
 import qsign from "@/app/assets/sign.jpeg";
