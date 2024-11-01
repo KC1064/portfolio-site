@@ -79,3 +79,8 @@
   src: url(./fonts/gilroy-free/Gilroy-FREE/Gilroy-Light.otf) format("opentype");
   font-weight: normal;
 }
+
+@font-face {
+  font-family: "teodor";
+  src: url(./fonts/teodor-font-family-1730443547-0/TeodorTRIAL-ExtraBold-BF672198fa9f2a0.otf);
+}

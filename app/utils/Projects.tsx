@@ -1,36 +1,20 @@
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card";
-import Image from "next/image";
 import { StaticImageData } from "next/image";
-import { ArrowUpRight } from 'lucide-react';
 import digi from "@/app/assets/digicipher.png";
 import hang from "@/app/assets/hangman.png";
 import clang from "@/app/assets/custom-lang.png";
-import { FaGithub } from "react-icons/fa";
-import {
-    HoverCard,
-    HoverCardContent,
-    HoverCardTrigger,
-} from "@/components/ui/hover-card"
-
+import demo from "@/app/assets/demo.webp";
 
 type Tech = {
-    [key: number]: string; // Allow numeric keys
+    [key: number]: string;
 };
 
 interface Project {
     title: string;
     description: string;
     link: string;
-    image: StaticImageData; // Use StaticImageData for Next.js images
+    image: StaticImageData;
     tech: Tech;
-    live?: string; // Optional property
+    live?: string;
 }
 
 export default function Projects() {
@@ -44,9 +28,9 @@ export default function Projects() {
                 1: "Rust",
                 2: "Clap",
                 3: "PickleDB",
-                4: "Serial Package"
+                4: "Serial Package",
             },
-            live: ""
+            live: "",
         },
         {
             title: "DigiCipher",
@@ -57,9 +41,9 @@ export default function Projects() {
                 1: "ReactJS",
                 2: "Tailwind",
                 3: "GSAP",
-                4: "Framer Motion"
+                4: "Framer Motion",
             },
-            live: "https://open-the-vault.vercel.app/"
+            live: "https://open-the-vault.vercel.app/",
         },
         {
             title: "Hangman Game",
@@ -71,59 +55,66 @@ export default function Projects() {
                 2: "CSS",
                 3: "Javascript",
             },
-            live: "https://kc1064.github.io/Hangman-Game/"
-        }
+            live: "https://kc1064.github.io/Hangman-Game/",
+        },
     ];
 
     return (
-        <div className="w-full">
-            <p className="text-white font-semibold text-3xl border-b-white border-b-2 mb-3">Projects</p>
-            <div className="flex flex-col gap-4 justify-center">
-                {
-                    projects.map((item, index) => {
-                        return (
-                            <HoverCard>
-                                <HoverCardTrigger>
-                                    <Card key={index} className="bg-transparent text-white relative group">
-                                        <CardHeader>
-                                            <CardTitle className="text-2xl">{item.title}</CardTitle>
-                                            <CardDescription>{item.description}</CardDescription>
-                                        </CardHeader>
-                                        <CardContent className="flex gap-1">
-                                            {
-                                                Object.keys(item.tech).map((key) => {
-                                                    const techKey = Number(key); // Convert string key to number
-                                                    return (
-                                                        <span key={techKey} className="h-max w-max px-2 bg-gray-500 text-black rounded-md italic ">
-                                                            {item.tech[techKey]}
-                                                        </span>
-                                                    );
-                                                })
-                                            }
-                                        </CardContent>
-                                        <CardFooter className="flex gap-2">
-                                            <p className="h-max w-max px-2 bg-slate-400 rounded-md text-black flex gap-1 items-center py-1 font-bold hover:bg-white transition-all duration-500">
-                                                <a href={item.link} target="_blank" rel="noopener noreferrer">GitHub</a>
-                                                <FaGithub size={"20px"} />
-                                            </p>
-                                            {item.live && (
-                                                <p className="flex h-max w-max px-2 py-1 gap-1 items-center text-black bg-slate-400 rounded-md font-bold hover:bg-white transition-all duration-500">
-                                                    <a href={item.live} target="_blank" rel="noopener noreferrer">Live Demo</a>
-                                                    <ArrowUpRight size={"18px"} />
-                                                </p>
-                                            )}
-                                        </CardFooter>
-                                    </Card>
-                                </HoverCardTrigger>
-                                <HoverCardContent>
-                                    <Image src={item.image} alt={item.title} layout="responsive" />
-                                </HoverCardContent>
-                            </HoverCard>
-                        );
-                    })
-                }
-
-
+        <div className="w-full px-4 flex flex-col gap-3">
+            <h1 style={{ fontFamily: "teodor" }} className="text-5xl">projects.</h1>
+            <div className="w-full h-[350px] p-1 border border-white rounded-lg">
+                <div
+                    className="overflow-hidden w-full h-[60%] bg-cover bg-center"
+                    style={{ backgroundImage: `url(${demo.src})` }} // Use demo.src for imported images
+                >
+                </div>
+                <div className="h-[40%]">
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi corporis eos excepturi sed laudantium repellat in suscipit perspiciatis aliquid quas iste accusamus iusto, maxime esse.</div>
+                    <div className="flex justify-between">
+                        <div className="ml-3">
+                            next js html react
+                        </div>
+                        <div className="mr-4">
+                            live github
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="w-full h-[350px] p-1 border border-white rounded-lg">
+                <div
+                    className="overflow-hidden w-full h-[60%] bg-cover bg-center"
+                    style={{ backgroundImage: `url(${demo.src})` }} // Use demo.src for imported images
+                >
+                </div>
+                <div className="h-[40%]">
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi corporis eos excepturi sed laudantium repellat in suscipit perspiciatis aliquid quas iste accusamus iusto, maxime esse.</div>
+                    <div className="flex justify-between">
+                        <div className="ml-3">
+                            next js html react
+                        </div>
+                        <div className="mr-4">
+                            live github
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="w-full h-[350px] p-1 border border-white rounded-lg">
+                <div
+                    className="overflow-hidden w-full h-[60%] bg-cover bg-center"
+                    style={{ backgroundImage: `url(${demo.src})` }} // Use demo.src for imported images
+                >
+                </div>
+                <div className="h-[40%]">
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi corporis eos excepturi sed laudantium repellat in suscipit perspiciatis aliquid quas iste accusamus iusto, maxime esse.</div>
+                    <div className="flex justify-between">
+                        <div className="ml-3">
+                            next js html react
+                        </div>
+                        <div className="mr-4">
+                            live github
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
