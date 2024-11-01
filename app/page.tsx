@@ -4,7 +4,7 @@ import Projects from "./utils/Projects";
 
 export default function Home() {
   return (
-    <div className="w-full lg:w-[60%] px-6 py-8 overflow-x-hidden">
+    <div className="w-full lg:w-[60%] px-6 py-8 overflow-x-hidden flex flex-col justify-between gap-4">
       <Navbar />
       <ProfileCard />
       <Projects />
