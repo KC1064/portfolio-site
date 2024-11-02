@@ -57,7 +57,7 @@ export default function About() {
         {
           education.map((item, index) => {
             return (
-              <div className="w-full border-white border p-2 rounded-md">
+              <div key={index} className="w-full border-white border p-2 rounded-md">
                 <h3 style={{ fontFamily: "heavy" }} className="flex justify-between font-bold ">{item.course}<span>{item.timeline}</span></h3>
                 <p style={{ fontFamily: "gilroy" }} className="text-sm">{item.institute}</p>
                 <p style={{ fontFamily: "gilroy" }} className="text-sm">Scored: {item.secured}</p>
