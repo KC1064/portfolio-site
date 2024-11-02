@@ -83,7 +83,7 @@ export default function TechStack() {
                 {
                     skills.map((item, index) => {
                         return (
-                            <p key={index} style={{ fontFamily: "gilroy" }} className="text-black font-extrabold h-max w-max px-2 py-1 bg-slate-100 rounded-md flex items-center text-sm gap-2"><span><Image src={item.icon} alt={item.name} className="h-6 w-6" /></span>{item.name}</p>
+                            <p key={index} style={{ fontFamily: "gilroy" }} className="dark:text-black text-white font-extrabold h-max w-max px-2 py-1 dark:bg-slate-100 bg-gray-500 rounded-md flex items-center text-sm gap-2"><span><Image src={item.icon} alt={item.name} className="h-6 w-6" /></span>{item.name}</p>
                         )
                     })
                 }

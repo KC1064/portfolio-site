@@ -70,7 +70,8 @@
 
 @font-face {
   font-family: "eternals";
-  src: url(./fonts/eternals-universe-font-1730426791-0/eternalsuniverse-na2rp.ttf) format("truetype");
+  src: url(./fonts/eternals-universe-font-1730426791-0/eternalsuniverse-na2rp.ttf)
+    format("truetype");
   font-weight: normal;
 }
 
@@ -82,5 +83,12 @@
 
 @font-face {
   font-family: "teodor";
-  src: url(./fonts/teodor-font-family-1730443547-0/TeodorTRIAL-ExtraBold-BF672198fa9f2a0.otf);
+  src: url(./fonts/teodor-font-family-1730443547-0/TeodorTRIAL-ExtraBold-BF672198fa9f2a0.otf)
+    format("opentype");
+}
+
+@font-face {
+  font-family: "heavy";
+  src: url(./fonts/teodor-font-family-1730443547-0/TeodorTRIAL-Regular-BF672198fb97abe.otf)
+    format("opentype");
 }

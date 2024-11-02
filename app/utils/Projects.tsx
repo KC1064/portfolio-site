@@ -74,42 +74,42 @@ export default function Projects() {
     ];
 
     return (
-        <div className="w-full px-4 flex flex-col gap-3">
+        <div className="w-full md:px-4 lg:px-4 px-2">
             <h1 style={{ fontFamily: "teodor" }} className="text-5xl">
                 projects.
             </h1>
             {projects.map((item, projectIndex) => {
                 return (
-                    <div key={projectIndex} className="w-full h-[380px] p-1 border border-white relative rounded-lg">
+                    <div key={projectIndex} className="w-full md:h-[380px] lg:h-[380px] h-[470px] p-2 border-2 dark:border-white border-black relative rounded-lg mt-3">
                         <div
                             className="overflow-hidden w-full h-[60%] bg-cover bg-center"
                             style={{ backgroundImage: `url(${item.image.src})` }}
                         ></div>
-                        <div className="h-[40%] p-3">
+                        <div className="h-[40%] p-1 flex-col flex gap-2">
                             <h1
                                 style={{ fontFamily: "teodor" }}
-                                className=" text-lg">{item.title}</h1>
-                            <p style={{ fontFamily: "gilroy" }} className="text-sm">{item.description}</p>
+                                className="lg:text-lg md:text-lg">{item.title}</h1>
+                            <p style={{ fontFamily: "gilroy" }} className="md:text-sm lg:text-sm text-xs">{item.description}</p>
                             <div className="flex justify-between items-center mt-2">
-                                <div className="flex gap-2 flex-wrap">
+                                <div className="flex lg:gap-2 md:gap-2 gap-1 items-center flex-wrap">
                                     {item.tech.map((tech, techIndex) => (
-                                        <div key={`${projectIndex}-${techIndex}`} style={{ fontFamily: "gilroy" }} className="backdrop-blur-2xl border-2 border-white rounded-md px-2 py-1 text-sm">
+                                        <div key={`${projectIndex}-${techIndex}`} style={{ fontFamily: "gilroy" }} className="backdrop-blur-2xl border-2 dark:border-white border-black rounded-md px-2 py-1 lg:text-sm md:text-sm text-xs">
                                             {tech}
                                         </div>
                                     ))}
                                 </div>
-                                <div className="flex gap-4">
-                                    <Link style={{ fontFamily: "gilroy" }} href={item.link} className="flex gap-2 bg-white font-extrabold rounded-md text-black text-sm items-center w-max px-2 py-1 hover:bg-slate-200 active:scale-90">
+                                <div className="flex  md:gap-4 lg:gap-4 gap-1">
+                                    <Link style={{ fontFamily: "gilroy" }} href={item.link} className="flex gap-2 font-extrabold rounded-md dark:bg-white dark:text-black bg-black text-white lg:text-sm md:text-sm text-xs items-center w-max px-2 py-1 hover:bg-slate-200 active:scale-90">
                                         <FaGithub size={16} />Github
                                     </Link>
                                     {item.live && (
-                                        <Link style={{ fontFamily: "gilroy" }} href={item.live} className="flex gap-2 font-extrabold bg-white rounded-md text-black text-sm items-center w-max px-2 py-1 hover:bg-slate-200 active:scale-90">
+                                        <Link style={{ fontFamily: "gilroy" }} href={item.live} className="flex gap-2 font-extrabold dark:bg-white dark:text-black bg-black  rounded-md text-white lg:text-sm md:text-sm text-xs items-center w-max px-2 py-1 hover:bg-slate-200 active:scale-90">
                                             <TfiWorld size={16} />   Live
                                         </Link>
                                     )}
                                 </div>
                             </div>
-                            <p className="text-xs absolute bottom-1 text-gray-400">*Images used here are just thumbnail not related to my projects</p>
+                            <p className="lg:text-xs md:text-xs text-[11px] absolute bottom-1 text-gray-400">*Images used here are just thumbnail not related to my projects</p>
                         </div>
                     </div>
                 );
