@@ -38,12 +38,13 @@ export default function About() {
         </div>
         <div style={{ fontFamily: "gilroy" }} className="w-full md:w-1/2 lg:w-1/2 text-left relative">
           <div className={`mb-8 ${click ? 'text-gray-400' : 'text-white'}`}>
-            I'm <span className={`${click ? 'text-white font-extrabold' : 'text-white'}`}>Kironmay Mishra</span>, a <span className={`${click ? 'text-white font-extrabold' : 'text-white'}`}>21-year-old</span> developer based in <span className={`${click ? 'text-white font-extrabold' : 'text-white'}`}>Bhubaneswar, Odisha, India</span>. Currently, I'm a <span className={`${click ? 'text-white font-extrabold' : 'text-white'}`}>pre-final year B.Tech student</span> in Computer Science from <span className={`${click ? 'text-white font-extrabold' : 'text-white'}`}>Silicon University</span>.
+            I&apos;m <span className={`${click ? 'text-white font-extrabold' : 'text-white'}`}>Kironmay Mishra</span>, a <span className={`${click ? 'text-white font-extrabold' : 'text-white'}`}>21-year-old</span> developer based in <span className={`${click ? 'text-white font-extrabold' : 'text-white'}`}>Bhubaneswar, Odisha, India</span>. Currently, I&apos;m a <span className={`${click ? 'text-white font-extrabold' : 'text-white'}`}>pre-final year B.Tech student</span> in Computer Science from <span className={`${click ? 'text-white font-extrabold' : 'text-white'}`}>Silicon University</span>.
 
             My passion for technology drives me to constantly learn by building and breaking things, gaining hands-on experience with new tools and frameworks. I enjoy solving real-world problems and thrive in collaborative environments where I can share ideas and learn from others.
 
             In my free time, I love to <span className={`${click ? 'text-white font-extrabold' : 'text-white'}`}>watch anime</span> series. Additionally, I am currently learning <span className={`${click ? 'text-white font-extrabold' : 'text-white'}`}>DevOps</span> to upskill and enhance my capabilities. My goal is to leverage my skills to contribute to impactful software solutions while continuously evolving as a developer in this fast-paced tech landscape.
           </div>
+
           <Switch onClick={() => { setClicked(!click) }} className="absolute bottom-0 right-2" />
 
         </div>
