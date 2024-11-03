@@ -8,7 +8,7 @@ export default function Home() {
     <div className="w-full lg:w-[60%] lg:px-6 lg:py-8 md:px-6 md:py-8 px-4 py-4  overflow-x-hidden flex flex-col justify-between gap-4">
       <Navbar />
       <ProfileCard />
-      <Projects />
+      <Projects showAll={false} view={true}/>
       <TechStack/>
     </div>
   );

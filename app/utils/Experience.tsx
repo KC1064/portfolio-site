@@ -32,13 +32,13 @@ export default function Experience() {
                 {
                     exp.map((item, index) => (
                         <li key={index} style={{ fontFamily: "gilroy" }} className="mb-10 ms-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-100 dark:bg-gray-100"></div>
-                            <time className="mb-1 text-sm font-normal leading-none text-gray-400">{item.timeline}</time>
-                            <h3 style={{ fontFamily: "heavy" }} className="text-lg text-white font-semibold">{item.title}</h3>
-                            <p className="text-gray-400 text-sm">{item.company}</p>
-                            <p className="mb-4  font-normal text-white">{item.description}</p>
+                            <div className="absolute w-3 h-3 bg-black rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-100 dark:bg-gray-100"></div>
+                            <time className="mb-1 text-sm font-normal leading-none dark:text-gray-400 text-gray-800">{item.timeline}</time>
+                            <h3 style={{ fontFamily: "heavy" }} className="text-lg text-black dark:text-white font-semibold">{item.title}</h3>
+                            <p className="dark:text-gray-400 text-gray-800 text-sm">{item.company}</p>
+                            <p className="mb-4  font-normal text-black dark:text-white">{item.description}</p>
                             <Link href={item.link} target="_blank">
-                                <button className="h-max font-bold w-max py-1 px-2 items-center border-white border-2 bg-transparent rounded-md flex gap-2 hover:bg-white hover:text-black active:scale-90 transition-all duration-300">
+                                <button className="h-max font-bold w-max py-1 px-2 items-center border-black dark:border-white border-2 bg-transparent rounded-md flex gap-2 hover:bg-white hover:text-black active:scale-90 transition-all duration-300">
                                     {item.linkname} <span>{item.icon}</span>
                                 </button>
                             </Link>
@@ -46,8 +46,6 @@ export default function Experience() {
                     ))
                 }
             </ol>
-
-
         </div>
     )
 }
