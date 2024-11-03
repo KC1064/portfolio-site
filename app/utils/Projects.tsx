@@ -25,7 +25,7 @@ interface ProjectsProps {
     view?: boolean;
 }
 
-export default function Projects({ showAll = false,view = false }: ProjectsProps) {
+export default function Projects({ showAll = false, view = false }: ProjectsProps) {
     const projects: Project[] = [
         {
             title: "Custom Language Interpreter",
@@ -84,8 +84,18 @@ export default function Projects({ showAll = false,view = false }: ProjectsProps
         <div className="w-full md:px-4 lg:px-4 px-2">
             <h1 style={{ fontFamily: "teodor" }} className="text-5xl flex justify-between items-end">
                 projects. {view && (
-                    <Link href={"/projects"} style={{ fontFamily: "gilroy" }} className="text-sm font-extralight text-gray-400 flex gap-1 items-center">
-                        View More <GoArrowRight size={16}/>
+                    <Link
+                        href="/projects"
+                        style={{ fontFamily: "gilroy" }}
+                        className="text-sm font-extralight text-gray-400 flex gap-1 items-center group"
+                    >
+                        <span className="transition-transform ease-linear duration-200 group-hover:scale-110">
+                            View More
+                        </span>
+                        <GoArrowRight
+                            size={16}
+                            className="transition-transform ease-linear duration-200 group-hover:translate-x-2"
+                        />
                     </Link>
                 )}
             </h1>
@@ -120,7 +130,7 @@ export default function Projects({ showAll = false,view = false }: ProjectsProps
                                     </div>
                                 ))}
                             </div>
-                            <div className="flex md:gap-4 lg:gap-4 gap-1">
+                            <div className="flex md:gap-4 lg:gap-2 gap-1">
                                 <Link
                                     style={{ fontFamily: "gilroy" }}
                                     href={item.link}
