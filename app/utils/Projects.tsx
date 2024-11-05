@@ -134,6 +134,7 @@ export default function Projects({ showAll = false, view = false }: ProjectsProp
                                 <Link
                                     style={{ fontFamily: "gilroy" }}
                                     href={item.link}
+                                    target="_blank"
                                     className="flex gap-2 font-extrabold rounded-md bg-black text-white lg:text-sm md:text-sm text-xs items-center w-max px-2 py-1 dark:bg-white dark:text-black dark:hover:bg-slate-400 dark:hover:text-white hover:bg-blue-300 hover:text-black 
                                     transition-transform duration-300 ease-in-out active:scale-90"
                                 >
@@ -144,6 +145,7 @@ export default function Projects({ showAll = false, view = false }: ProjectsProp
                                     <Link
                                         style={{ fontFamily: "gilroy" }}
                                         href={item.live}
+                                        target="_blank"
                                         className="flex gap-2 font-extrabold rounded-md bg-black text-white lg:text-sm md:text-sm text-xs items-center w-max px-2 py-1 dark:bg-white dark:text-black dark:hover:bg-slate-400 dark:hover:text-white hover:bg-blue-300 hover:text-black
                                     transition-transform duration-300 ease-in-out active:scale-90"
                                     >

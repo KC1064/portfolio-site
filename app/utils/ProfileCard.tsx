@@ -3,7 +3,7 @@ import dp from "@/app/assets/DP.jpg";
 import { LiaFileDownloadSolid } from "react-icons/lia";
 import { FiLinkedin, FiGithub, FiMail } from "react-icons/fi";
 import Link from "next/link";
-// import Resume from "@/a"
+// import res from "app/assets/resume.pdf"
 
 const ProfileCard = () => {
     const socials = [
@@ -46,14 +46,15 @@ const ProfileCard = () => {
                 </p>
                 <div className="mt-6 flex gap-6 justify-start items-center">
                     <a
-                        href="/resume.pdf"
+                        href="https://drive.google.com/file/d/1xDctoGXSREiu75YzgpwEY51QFA0uQlg7/view?usp=sharing"
+                        target="_blank"
                         download="Kironmay_Mishra_Resume.pdf"
                         style={{ fontFamily: "gilroy" }}
                         className="w-max px-2 py-1 font-semibold border-2 dark:border-white border-black flex gap-2 items-center rounded-md text-sm">
                         Resume <LiaFileDownloadSolid size={24} /></a>
                     <div className="flex gap-3">
                         {socials.map((item, index) => (
-                            <Link key={index} href={item.link}>{item.icon}</Link>
+                            <Link key={index} href={item.link} target="_blank">{item.icon}</Link>
                         ))}
                     </div>
                 </div>

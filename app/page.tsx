@@ -1,3 +1,4 @@
+import Footer from "./utils/Footer";
 import Navbar from "./utils/Navbar";
 import ProfileCard from "./utils/ProfileCard";
 import Projects from "./utils/Projects";
@@ -10,6 +11,7 @@ export default function Home() {
       <ProfileCard />
       <Projects showAll={false} view={true}/>
       <TechStack/>
+      <Footer/>
     </div>
   );
 }
