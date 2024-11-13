@@ -2,9 +2,6 @@ import Link from "next/link";
 import { FaGithub } from "react-icons/fa6";
 import { FaRegFileCode } from "react-icons/fa";
 
-
-
-
 export default function Experience() {
     const exp = [{
         title: "Rust Developer Intern",

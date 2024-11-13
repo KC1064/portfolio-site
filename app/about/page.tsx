@@ -53,15 +53,17 @@ export default function About() {
       </div>
 
       <Experience />
-      <div className="mt-2 flex flex-col gap-3">
+      <div className="mt-2 flex flex-col gap-3 ">
         <h2 style={{ fontFamily: "teodor" }} className="text-4xl">education.</h2>
         {
           education.map((item, index) => {
             return (
-              <div key={index} className="w-full dark:border-white border-black border p-2 rounded-md">
-                <h3 style={{ fontFamily: "heavy" }} className="flex justify-between font-bold ">{item.course}<span>{item.timeline}</span></h3>
-                <p style={{ fontFamily: "gilroy" }} className="text-sm">{item.institute}</p>
-                <p style={{ fontFamily: "gilroy" }} className="text-sm">Scored: {item.secured}</p>
+              <div key={index} className="w-full dark:border-white/40 border-black border p-0.5 rounded-md">
+                <div className="dark:border-white/30 border-black p-1 border rounded-sm ">
+                  <h3 style={{ fontFamily: "heavy" }} className="flex justify-between font-bold">{item.course}<span>{item.timeline}</span></h3>
+                  <p style={{ fontFamily: "gilroy" }} className="text-sm">{item.institute}</p>
+                  <p style={{ fontFamily: "gilroy" }} className="text-sm">Scored: {item.secured}</p>
+                </div>
               </div>
 
             )
