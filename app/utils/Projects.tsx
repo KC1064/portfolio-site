@@ -101,7 +101,7 @@ export default function Projects({ showAll = false, view = false }: ProjectsProp
                     )}
                 </h1>
                 {displayedProjects.map((item, projectIndex) => (
-                    <div className="border p-1 mt-4 dark:border-white/45 border-black/30 rounded-lg">
+                    <div key={projectIndex} className="border p-1 mt-4 dark:border-white/45 border-black/30 rounded-lg">
                         <div
                             key={projectIndex}
                             className="w-full md:h-[380px] lg:h-[380px] h-[470px] p-2 border dark:border-white/25 border-black relative rounded-lg"
