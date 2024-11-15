@@ -54,7 +54,7 @@ const ProfileCard = () => {
                         Resume <LiaFileDownloadSolid size={24} /></a>
                     <div className="flex gap-3">
                         {socials.map((item, index) => (
-                            <Link key={index} href={item.link} target="_blank">{item.icon}</Link>
+                            <Link key={index} href={item.link} target="_blank" className="dark:text-white/55 hover:dark:text-white text-black/55 hover:text-black">{item.icon}</Link>
                         ))}
                     </div>
                 </div>
